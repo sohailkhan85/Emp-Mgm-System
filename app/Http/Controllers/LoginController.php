@@ -58,13 +58,13 @@ class LoginController extends Controller
 
         $user=new User;
 
-       
         $credentials = $request->only('username', 'password'  );
         //print_r($credentials) ;
         //die; 
         if (Auth::attempt($credentials)) 
         {
-   
+            echo "Inside Success Login";
+            die;
             $users = User::all();
   
             $request->session()->put('user_id', '123');
