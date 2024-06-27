@@ -26,7 +26,7 @@ class LoginController extends Controller
             [
                 'name'=>'required',
                 'username'=>'required',
-                'email'=>'required | email',
+                'email'=>'required | email | unique:users',
                 'password'=> 'required | confirmed',
                 'password_confirmation'=> 'required'
             ]
@@ -63,7 +63,7 @@ class LoginController extends Controller
         //die; 
         if (Auth::attempt($credentials)) 
         {
-            
+
             $users = User::all();
   
             $request->session()->put('user_id', '123');

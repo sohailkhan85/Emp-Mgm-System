@@ -33,7 +33,7 @@
         @csrf
         <div class="form-group  required">
             <label for="">Name</label>
-            <input type="text" name="name" id="" class="form-control">
+            <input type="text" name="name" id="" class="form-control" value="{{old('name')}}">
 
             <span class="text-danger">
                 @error('name')
@@ -43,7 +43,7 @@
         </div>
             <div class="form-group  required">
                 <label for="">Username</label>
-                <input type="text" name="username" id="" class="form-control">
+                <input type="text" name="username" id="" class="form-control" value="{{old('username')}}">
 
                 <span class="text-danger">
                     @error('username')
@@ -53,7 +53,7 @@
             </div>
             <div class="form-group  required">
                 <label for="">Email</label>
-                <input type="text" name="email" id="" class="form-control">
+                <input type="text" name="email" id="" class="form-control" value="{{old('email')}}">
 
                 <span class="text-danger">
                     @error('email')
@@ -63,7 +63,7 @@
             </div>
             <div class="form-group   required">
                 <label for="">Password</label>
-                <input type="password" name="password" id="" class="form-control">
+                <input type="password" name="password" id="" class="form-control" value="{{old('password')}}">
                 <span class="text-danger">
                     @error('password')
                         {{$message}}
@@ -72,7 +72,7 @@
             </div>
             <div class="form-group   required">
                 <label for="">Confirm Password</label>
-                <input type="password" name="password_confirmation" id="" class="form-control">
+                <input type="password" name="password_confirmation" id="" class="form-control" value="{{old('password_confirmation')}}">
             </div>
             <span class="text-danger">
                 @error('password_confirmation')
