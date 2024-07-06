@@ -125,7 +125,7 @@ class EmpController extends Controller
         else{
             
             return response()->json([
-                    'status'=>'404',
+                    'status'=>404,
                     'message' => 'No Such Record is Found'
             ],404);
         }
