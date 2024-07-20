@@ -13,7 +13,7 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout1');
 Route::post('/login', [LoginController::class, 'login_action'])->name('login_action');
 Route::get('/emp-signup', [LoginController::class, 'emp_signup'])->name('emp.signup');
 Route::post('/emp-signup_action', [LoginController::class, 'emp_signup_action'])->name('emp_signup_action');
-Route::get('/emp_view',[EmpController::class, 'emp_view'])->name('emp.view');
+Route::get('/emp_view',[EmpController::class, 'emp_view'])->name('emp.view')->middleware('LoginCheck');
 Route::get('/depts_view',[EmpController::class, 'depts_view'])->name('depts.view');
 Route::get('/emp_create',[EmpController::class, 'emp_create'])->name('emp.create');
 Route::post('/emp_create',[EmpController::class, 'emp_create_post'])->name('emp.create.post');
